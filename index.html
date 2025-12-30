@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>香港流行乐地名地图</title>
+
+  <!-- 高德地图 JS API (增加 plugin 参数加载定位和驾车插件) -->
+  <script src="https://webapi.amap.com/maps?v=2.0&key=05d41db60ca5d0b6494b963becb264a2&plugin=AMap.Geolocation,AMap.Driving,AMap.MoveAnimation"></script>
+
+  <!-- 样式 -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- 搜索栏 -->
+  <div id="search-panel">
+    <input type="text" id="search-input" placeholder="搜索歌名、歌手或地点..." />
+    <button id="search-btn">搜索</button>
+  </div>
+
+  <!-- 侧边栏列表 -->
+  <div id="sidebar">
+    <div class="sidebar-header">地点列表</div>
+    <ul id="location-list">
+      <!-- JS自动生成列表项 -->
+    </ul>
+  </div>
+
+  <!-- 地图容器 -->
+  <div id="map"></div>
+
+  <!-- 主逻辑 -->
+  <script src="main.js"></script>
+</body>
+</html>
